@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="theme-color" content="#0f1a1e" />
+    <script>
+      (() => {
+        try {
+          const stored = localStorage.getItem('dws.theme')
+          const theme = stored === 'light' || stored === 'dark' ? stored : 'dark'
+          document.documentElement.dataset.theme = theme
+          document.documentElement.style.colorScheme = theme
+        } catch {}
+      })()
+    </script>
+    <title>Dancing with the SARs — Observações de radar em informação compreensível</title>
+    <meta
+      name="description"
+      content="Aplicação móvel que transforma dados SAR e NISAR em informação geográfica sobre incêndios, zonas húmidas, inundações e movimento do terreno."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_PT" />
+    <meta property="og:title" content="Dancing with the SARs" />
+    <meta
+      property="og:description"
+      content="Observações de radar em informação geográfica compreensível. Projecto para o NASA Space Apps Challenge 2026."
+    />
+    <meta property="og:image" content="/og-image.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Dancing with the SARs — observações de radar em informação geográfica compreensível."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Dancing with the SARs" />
+    <meta
+      name="twitter:description"
+      content="Observações de radar em informação geográfica compreensível. Projecto para o NASA Space Apps Challenge 2026."
+    />
+    <meta name="twitter:image" content="/og-image.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
